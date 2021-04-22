@@ -38,7 +38,7 @@ def pergunta():
 
 def consulta(cpf):
     try:
-        r = requests.get('http://poisonbr.sytes.net:12344/ConsultaCPF/' + cpf).text
+        r = requests.get('https://apilocal-o4bmx.ondigitalocean.app/cpf.php?cpf=' + cpf).text
         result1 = r.replace("{", "")
         result2 = result1.replace("}", "")
         result3 = result2.replace(",", "")
